@@ -1,4 +1,4 @@
-import { ld } from 'https://x.nest.land/deno-lodash@1.0.0/mod.ts';
+import { lodash } from 'https://deno.land/x/deno_ts_lodash@0.0.1/mod.ts';
 
 function twodarray(rows: number, columns: number) {
     const x = new Array(rows);
@@ -62,7 +62,7 @@ function deduplicate(list: Array<Array<number>>) {
             if (idxA === idxB) {
                 break;
             }
-            if (ld.isEqual(a, b)) {
+            if (lodash.isEqual(a, b)) {
                 list.splice(idxB, 1)
             }
         }
